@@ -4,6 +4,23 @@ Consulta CEP_bolado foi criado pra demonstrar como se consome webservice de form
 Neste momento vou usar apenas o ws dos correios. 
 Pretendo consumir ws do IBGE
 
+/*
+  .--.,                                                              
+,--.'  \                                 ,---,               __  ,-. 
+|  | /\/                 ,----._,.   ,-+-. /  |            ,' ,'/ /| 
+:  : :      ,--.--.     /   /  ' /  ,--.'|'   |    ,---.   '  | |' | 
+:  | |-,   /       \   |   :     | |   |  ,"' |   /     \  |  |   ,' 
+|  : :/|  .--.  .-. |  |   | .\  . |   | /  | |  /    /  | '  :  /   
+|  |  .'   \__\/: . .  .   ; ';  | |   | |  | | .    ' / | |  | '    
+'  : '     ," .--.; |  '   .   . | |   | |  |/  '   ;   /| ;  : |    
+|  | |    /  /  ,.  |   `---`-'| | |   | |--'   '   |  / | |  , ;    
+|  : \   ;  :   .'   \  .'__/\_: | |   |/       |   :    |  ---'     
+|  |,'   |  ,     .-./  |   :    : '---'         \   \  /            
+`--'      `--`---'       \   \  /                 `----'             
+                          `--`-'                                 
+
+*/
+
 Crie o banco de dados no Mysql
 user:root
 senha:123456
