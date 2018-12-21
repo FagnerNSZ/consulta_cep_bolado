@@ -2,6 +2,89 @@
 
 https://bognarjunior.wordpress.com/2016/01/12/rotas-com-nodejs/
 
+
+
+/*
+Prineiro forma de requisicao
+var http = require('http');
+http.createServer(function(req,res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' }); 
+  res.write('Olá mundo!');
+  res.edn();
+}).listen(3000);
+console.log('Servidor iniciado!');
+*/
+
+'use strict';
+
+var nodeStatic = require('node-static');
+var http = require('http');
+
+//var socketIO = require('socket.io');
+
+
+var fileServer = new(nodeStatic.Server)();
+
+
+var app = http.createServer(function(req, res) {
+    fileServer.serve(req, res);
+
+res.writeHead(200, {"Content-Type":"text/html; charset=utf-8"});
+//res.writeHead(200, { 'Content-Type: text/html; charset=utf-8' }); 
+  
+if (req.url == "/") {
+        //response.write("<h1>Hello World!</h1>");
+    console.log("/");
+    }else if(req.url=="/index"){
+    	console.log("/index")
+    } else if (req.url == "/next") {
+    console.log("next");
+  
+        //response.write("<h1>Página 2</h1>");
+    } else {
+        //response.write("<h1>Url não encontrada</h1>");
+    
+//res.redirect('http://www.google.com');
+
+   // res.writeHead(302, {
+  	//	'Location': 'http://www.google.com'
+
+  	//	});
+    console.log("URL Erro");
+    }
+
+
+    //Rota da pagina que esta sendo requisitada
+    //TODO: Armazenar rota em uma lista mantendo o log de tudo que foi acessado durante a requisicao
+    //TODO: ARMAZENAR UMA LISTA FAZER UM LOG CONTROLANDO OS DISPAROS QUE FORAM FEITOS
+    //TODO; USAR ISSO PRA PEGAR AS REQUISICOES -
+    console.log(' + Requisicao em: http://localhost:8080' + req.url);
+
+
+       // res.redirect('/view/video.html');
+//TODO:VALIDAR A ROTA
+//    if(req.url == "/"  && req.url == "/public/main.css" && req.url=="/public/main.css" && req.url == "/public/images/video.png" && "public/images/close.png" && req.url == "/js/main.js"){
+
+        console.log(' + Requisicao em: http://localhost:8080' + req.url);
+        console.log('STATUS_CODE:'+ res.statusCode);
+
+
+
+  //  }
+    /*else{
+
+        res.write("<h1>!Erro 4000</h1>");
+    }*/
+
+
+
+    }).listen(8080);
+
+
+
+
+
+
 Consulta CEP_bolado foi criado pra demonstrar como se consome webservice de forma simples validando cep 
 Neste momento vou usar apenas o ws dos correios. 
 Pretendo consumir ws do IBGE
