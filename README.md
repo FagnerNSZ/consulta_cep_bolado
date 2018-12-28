@@ -1,11 +1,17 @@
 #Corrigindo erros nodejs
 
 npm cache clean, npm install jquery (to my app folder)
+
 npm install --save jquery
+
 npm install jquery -g
+
 npm rebuild
+
 sudo npm install jquery -g
+
 sudo npm install jquery
+
 export NODE_PATH=/usr/local/lib/node_modules
 
 # consulta_cep_bolado
